@@ -4,7 +4,7 @@ import { Button } from '../index'
 
 export const Navigation = () => {
   return (
-    <nav className="navbar flex justify-between items-center pr-48 pl-48 ">
+    <nav className="navbar flex justify-between items-center">
       <Button path="/" name="PetsGo" variant="text" type="link" />
       <div className="flex gap-5">
         <Button path="/login" name="Login" variant="outlined" type="link" />
