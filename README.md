@@ -3,6 +3,7 @@
 Application created with CRA in Typescript, uses:
 - `react-router-dom`
 - `tailwindcss`
+- `prettier`
 - `formik` and schema-based form validation with `yup`
 - `sass`
 - `react-hooks`
