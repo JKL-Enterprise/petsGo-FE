@@ -1,10 +1,11 @@
 import React from 'react'
+import { Navigation } from './components'
 
 const App = () => {
   return (
-    <div>
-      <p>PetsGo</p>
-    </div>
+    <>
+      <Navigation />
+    </>
   )
 }
 
