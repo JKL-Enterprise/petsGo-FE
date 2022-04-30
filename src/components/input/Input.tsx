@@ -14,7 +14,7 @@ export const Input = ({
   name,
   text,
   type = 'text',
-  placeholder = name,
+  placeholder = text,
   value,
   onChange,
 }: InputProps) => {
