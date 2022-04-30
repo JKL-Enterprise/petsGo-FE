@@ -17,5 +17,13 @@
 
     &.text{
     }
+    
+    &.disabled{
+      background-color: grey;
+      border: 0.125em solid grey;
+      color: black;
+      opacity: 0.5;
+      pointer-events: none;
+    }
   }
 }
