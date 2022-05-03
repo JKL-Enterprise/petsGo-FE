@@ -4,7 +4,7 @@ import './Input.scss'
 interface InputProps {
   name: string
   text: string
-  type?: 'text' | 'number' | 'password'
+  type?: 'text' | 'number' | 'password' | 'email'
   placeholder?: string
   value: string
   onChange: (props: any) => void
