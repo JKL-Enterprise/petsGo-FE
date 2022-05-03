@@ -1,4 +1,6 @@
-export const initialValues = {
+import { Values } from './onSubmit'
+
+export const initialValues: Values = {
   email: '',
   password: '',
 }
