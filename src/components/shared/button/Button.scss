@@ -1,18 +1,18 @@
 .buttonContainer{
   .button{
-    border-radius: 5px;
-    color: dodgerblue;
+    border-radius: 10px;
+    color: #1C658C;
     padding: 0.5em 1em;
     position: relative;
 
     &.contained {
       color: white;
-      background: dodgerblue;
-      border: 0.125em solid dodgerblue;
+      background: #1C658C;
+      border: 0.125em solid #1C658C;
     }
 
     &.outlined{
-      border: 0.125em solid dodgerblue;
+      border: 0.125em solid #1C658C;
     }
 
     &.text{
