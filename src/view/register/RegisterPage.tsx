@@ -4,8 +4,10 @@ import { Button, Checkbox, Input } from '../../components'
 import { validationSchema } from './validationSchema'
 import { initialValues } from './initialValues'
 import { onSubmit } from './onSubmit'
+import { useTranslation } from 'react-i18next'
 
 export const RegisterPage = () => {
+  const { t } = useTranslation()
   return (
     <div>
       <Formik
@@ -20,35 +22,47 @@ export const RegisterPage = () => {
           >
             <Input
               name="firstName"
-              text="First Name"
+              text={t('userCreateForm.firstName')}
               onChange={handleChange}
               value={values.firstName}
             />
             <Input
               name="lastName"
-              text="Last Name"
+              text={t('userCreateForm.lastName')}
               onChange={handleChange}
               value={values.lastName}
             />
             <Input
               name="email"
-              text="E-mail"
+              text={t('userCreateForm.email')}
               type="email"
               onChange={handleChange}
               value={values.email}
             />
             <Input
               name="password"
-              text="Password"
+              text={t('userCreateForm.password')}
               type="password"
               onChange={handleChange}
               value={values.password}
             />
             <div className="flex gap-3">
-              <Checkbox type="radio" name="role" value="Sitter" />
-              <Checkbox type="radio" name="role" value="Searcher" />
+              <Checkbox
+                type="radio"
+                name="role"
+                value={t('userCreateForm.sitter')}
+              />
+              <Checkbox
+                type="radio"
+                name="role"
+                value={t('userCreateForm.searcher')}
+              />
             </div>
-            <Button disabled={isSubmitting} name="Register" type="submit" />
+            <Button
+              disabled={isSubmitting}
+              name={t('userCreateForm.register')}
+              type="submit"
+            />
           </form>
         )}
       </Formik>

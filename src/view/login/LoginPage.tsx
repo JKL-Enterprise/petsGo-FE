@@ -4,8 +4,10 @@ import { initialValues } from './initialValues'
 import { onSubmit } from './onSubmit'
 import { validationSchema } from './validationSchema'
 import { Button, Input } from '../../components'
+import { useTranslation } from 'react-i18next'
 
 export const LoginPage = () => {
+  const { t } = useTranslation()
   return (
     <div>
       <Formik
@@ -20,20 +22,24 @@ export const LoginPage = () => {
           >
             <Input
               name="email"
-              text="E-mail"
+              text={t('userCreateForm.email')}
               type="email"
               onChange={handleChange}
               value={values.email}
             />
             <Input
               name="password"
-              text="Password"
+              text={t('userCreateForm.password')}
               type="password"
               onChange={handleChange}
               value={values.password}
             />
 
-            <Button disabled={isSubmitting} name="Login" type="submit" />
+            <Button
+              disabled={isSubmitting}
+              name={t('userCreateForm.login')}
+              type="submit"
+            />
           </form>
         )}
       </Formik>
