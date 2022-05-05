@@ -1,6 +1,4 @@
-import { FormikHelpers } from 'formik'
-
-export interface Values {
+export interface Model {
   firstName: string
   lastName: string
   email: string
@@ -8,10 +6,6 @@ export interface Values {
   role: string
 }
 
-export const onSubmit = (
-  values: Values,
-  { setSubmitting }: FormikHelpers<Values>
-) => {
+export const onSubmit = (values: Model) => {
   console.log(values)
-  setSubmitting(false)
 }
