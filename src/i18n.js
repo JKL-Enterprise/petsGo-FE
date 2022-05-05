@@ -1,6 +1,6 @@
 import i18next from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import { translationPL } from './locales/pl/translationPL.js'
+import { translationPL } from './locales/pl/translationPL.ts'
 
 const resources = {
   pl: {
