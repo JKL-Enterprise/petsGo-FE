@@ -22,14 +22,14 @@ export const LoginPage = () => {
           >
             <Input
               name="email"
-              text={t('userCreateForm.email')}
+              label={t('userCreateForm.email')}
               type="email"
               onChange={handleChange}
               value={values.email}
             />
             <Input
               name="password"
-              text={t('userCreateForm.password')}
+              label={t('userCreateForm.password')}
               type="password"
               onChange={handleChange}
               value={values.password}

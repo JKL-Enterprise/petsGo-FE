@@ -1,6 +1,6 @@
-import { Values } from './onSubmit'
+import { Model } from './onSubmit'
 
-export const initialValues: Values = {
+export const initialValues: Model = {
   email: '',
   password: '',
 }
