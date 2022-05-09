@@ -1,5 +1,5 @@
 export interface Model {
-  email: string
+  username: string
   password: string
 }
 

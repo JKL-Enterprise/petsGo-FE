@@ -4,9 +4,12 @@ export const translationPL = {
     register: 'Zarejestruj',
     firstName: 'Imię',
     lastName: 'Nazwisko',
-    email: 'E-mail',
+    username: 'Nazwa użytkownika',
     password: 'Hasło',
-    sitter: 'Wyprowadzacz',
+    sitter: 'Opiekun',
     searcher: 'Poszukiwacz',
+    info: {
+      success: 'Utworzono użytkownika',
+    },
   },
 }

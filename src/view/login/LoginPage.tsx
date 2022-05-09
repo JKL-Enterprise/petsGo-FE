@@ -21,11 +21,10 @@ export const LoginPage = () => {
             className="flex flex-col justify-center items-center gap-3"
           >
             <Input
-              name="email"
-              label={t('userCreateForm.email')}
-              type="email"
+              name="username"
+              label={t('userCreateForm.username')}
               onChange={handleChange}
-              value={values.email}
+              value={values.username}
             />
             <Input
               name="password"
