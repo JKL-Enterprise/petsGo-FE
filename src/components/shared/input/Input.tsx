@@ -21,6 +21,7 @@ export const Input = ({
   return (
     <div className="inputContainer">
       <input
+        id={name}
         name={name}
         type={type}
         className="input"
