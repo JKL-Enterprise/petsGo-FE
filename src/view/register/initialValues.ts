@@ -1,6 +1,6 @@
-import { Model } from './onSubmit'
+import { registerFormModel } from '../../models/forms'
 
-export const initialValues: Model = {
+export const initialValues: registerFormModel = {
   firstName: '',
   lastName: '',
   username: '',

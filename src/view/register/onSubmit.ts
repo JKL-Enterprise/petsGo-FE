@@ -1,14 +1,10 @@
 import { toast } from 'react-toastify'
+import { userService } from '../../services/userServices/user.service'
+import { registerFormModel } from '../../models/forms'
 
-export interface Model {
-  firstName: string
-  lastName: string
-  username: string
-  password: string
-  role: string
-}
+export const onSubmit = (values: registerFormModel) => {
+  userService.registration(values)
 
-export const onSubmit = (values: Model) => {
   toast.success('User created!', {
     theme: 'colored',
     position: 'bottom-right',
@@ -19,5 +15,4 @@ export const onSubmit = (values: Model) => {
     draggable: true,
     progress: undefined,
   })
-  console.log(values)
 }

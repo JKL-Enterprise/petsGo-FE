@@ -49,13 +49,13 @@ export const RegisterPage = () => {
               <CheckboxField
                 type="radio"
                 name="role"
-                value="sitter"
+                value="PET_SITTER"
                 label={t('userCreateForm.sitter')}
               />
               <CheckboxField
                 type="radio"
                 name="role"
-                value="searcher"
+                value="PET_SEARCHER"
                 label={t('userCreateForm.searcher')}
               />
             </div>

@@ -1,6 +1,6 @@
-import { Model } from './onSubmit'
+import { loginFormModel } from '../../models/forms'
 
-export const initialValues: Model = {
+export const initialValues: loginFormModel = {
   username: '',
   password: '',
 }
