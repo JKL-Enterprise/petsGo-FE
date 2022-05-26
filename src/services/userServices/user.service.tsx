@@ -3,15 +3,14 @@ import axios from 'axios'
 import { loginFormModel, registerFormModel } from '../../models/forms'
 
 export const userService = {
-  registration: (values: registerFormModel) => {
+  registration: (values: registerFormModel) =>
     axios
       //@ts-ignore
       .post(`${process.env.REACT_APP_API_URL}/user/save`, values)
       .then((resp) => resp)
-      .catch((err) => err)
-  },
+      .catch((err) => err),
 
-  login: (values: loginFormModel) => {
+  login: (values: loginFormModel) =>
     axios
       //@ts-ignore
       .post(`${process.env.REACT_APP_API_URL}/login`, values, {
@@ -20,6 +19,5 @@ export const userService = {
         },
       })
       .then((resp) => resp)
-      .catch((err) => err)
-  },
+      .catch((err) => err),
 }
