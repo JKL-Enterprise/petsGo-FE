@@ -8,7 +8,7 @@ import { useContext } from 'react'
 import { UserUserAuthenticationContext } from '../../context/UserAuthenticationProvider'
 import { loginFormModel } from '../../models/forms'
 import { userService } from '../../services/userServices/user.service'
-import { Toast } from '../../components/shared/toast/Toast'
+import { Toast } from '../../components'
 
 export const LoginPage = () => {
   const { t } = useTranslation()

@@ -6,7 +6,7 @@ import { initialValues } from './initialValues'
 import { useTranslation } from 'react-i18next'
 import { registerFormModel } from '../../models/forms'
 import { userService } from '../../services/userServices/user.service'
-import { Toast } from '../../components/shared/toast/Toast'
+import { Toast } from '../../components'
 
 export const RegisterPage = () => {
   const { t } = useTranslation()
