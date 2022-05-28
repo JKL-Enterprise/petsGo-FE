@@ -21,7 +21,7 @@ After download/clone repo use `npm install` to install necessary packages to sta
 
 Run the app in the development mode with command `npm start`, works on port 3000.
 
-####Test runner
+### Test runner
 
 Run the test mode in cli with command `npm run test`.
 
