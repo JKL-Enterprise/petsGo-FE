@@ -1,13 +1,30 @@
 import React from 'react'
 import { Formik } from 'formik'
 import { initialValues } from './initialValues'
-import { onSubmit } from './onSubmit'
 import { validationSchema } from './validationSchema'
 import { Button, Input } from '../../components'
 import { useTranslation } from 'react-i18next'
+import { useContext } from 'react'
+import { UserUserAuthenticationContext } from '../../context/UserAuthenticationProvider'
+import { loginFormModel } from '../../models/forms'
+import { userService } from '../../services/userServices/user.service'
+import { Toast } from '../../components/shared/toast/Toast'
 
 export const LoginPage = () => {
   const { t } = useTranslation()
+  const { changeAccessToken, changeRefreshToken } = useContext(
+    UserUserAuthenticationContext
+  )
+
+  const onSubmit = async (values: loginFormModel) => {
+    const response = await userService.login(values)
+    if (response?.status === 200) {
+      Toast('success', 'Logged')
+      changeAccessToken(response.data?.access_token)
+      changeRefreshToken(response.data?.refresh_token)
+    } else Toast('error', 'Server fetch error')
+  }
+
   return (
     <div>
       <Formik

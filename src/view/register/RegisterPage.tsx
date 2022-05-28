@@ -3,11 +3,22 @@ import { Formik } from 'formik'
 import { Button, CheckboxField, Input } from '../../components'
 import { validationSchema } from './validationSchema'
 import { initialValues } from './initialValues'
-import { onSubmit } from './onSubmit'
 import { useTranslation } from 'react-i18next'
+import { registerFormModel } from '../../models/forms'
+import { userService } from '../../services/userServices/user.service'
+import { Toast } from '../../components/shared/toast/Toast'
 
 export const RegisterPage = () => {
   const { t } = useTranslation()
+
+  const onSubmit = async (values: registerFormModel) => {
+    const response = await userService.registration(values)
+    if (response?.status === 200) Toast('success', 'Account created')
+    else if (response?.response.status === 500)
+      Toast('info', 'Account already exist')
+    else Toast('error', 'Server fetch error')
+  }
+
   return (
     <div>
       <Formik
