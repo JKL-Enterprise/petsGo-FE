@@ -1,24 +1,28 @@
 # Pets-GO
 
-Application created with CRA in Typescript, uses:
-- `react-router-dom`
-- `tailwindcss`
-- `prettier`
-- `formik` and schema-based form validation with `yup`
-- `sass`
+### Application created with CRA in `Typescript`, uses:
 - `react-hooks`
+- `react-router-dom`
+- `formik` and schema-based form validation with `yup`
+- `tailwindcss`
+- `sass`
 
-## Info about the construction of the application
+### Tests are written using:
+- `jest`
+- `cypress`
 
+## Info about the construction of the application:
 
-## Preparation for download (with npm)
+### Preparation for download (with npm)
 
-After download/clone repo use `npm install`.
+After download/clone repo use `npm install` to install necessary packages to start application.
 
-## Run project
+### Run project
 
-Run the app in the development mode with command `npm start`.
+Run the app in the development mode with command `npm start`, works on port 3000.
 
-## Test runner
+####Test runner
 
 Run the test mode in cli with command `npm run test`.
+
+Cypress tests can be used with `npm run cypress:open`, then choose specified test file.
