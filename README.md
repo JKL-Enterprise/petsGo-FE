@@ -1,17 +1,18 @@
-# Pets-GO
+# pets-GO 🐶🐱
+It is a group Engineering Thesis in the implementation phase. Application is created for mobile and web systems. With the help of the application, we can find a job as an animal keeper or add an advertisement in search of a pet sitter. We also want to add a payment mechanism.
 
-### Application created with CRA in `Typescript`, uses:
+### 🔧Application created with CRA in `Typescript`, uses: 
 - `react-hooks`
 - `react-router-dom`
 - `formik` and schema-based form validation with `yup`
 - `tailwindcss`
 - `sass`
 
-### Tests are written using:
+### 🧪Tests are written using:
 - `jest`
 - `cypress`
 
-## Info about the construction of the application:
+## ✔️Info about the construction of the application:
 
 ### Preparation for download (with npm)
 
@@ -21,7 +22,7 @@ After download/clone repo use `npm install` to install necessary packages to sta
 
 Run the app in the development mode with command `npm start`, works on port 3000.
 
-####Test runner
+### Test runner
 
 Run the test mode in cli with command `npm run test`.
 
