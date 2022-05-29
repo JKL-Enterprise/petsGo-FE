@@ -9,7 +9,7 @@ import {
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'
 import UserAuthenticationProvider from './context/UserAuthenticationProvider'
-import { ProtectedRoute } from './components/utils/ProtectedRoute'
+import { ProtectedRoute } from './components'
 
 const App = () => {
   return (

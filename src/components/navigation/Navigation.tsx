@@ -18,7 +18,7 @@ export const Navigation = () => {
   const logout = () => {
     localStorage.removeItem('user')
     changeAccessToken('')
-    Toast('success', 'Logged out')
+    Toast('success', t('toastInfo.logout'))
   }
 
   return (

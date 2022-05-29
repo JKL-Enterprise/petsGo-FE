@@ -20,5 +20,6 @@ export const translationPL = {
       doesntExist: 'Nie znaleziono użytkownika',
     },
     serverError: 'Błąd pobierania serwera',
+    logout: 'Wylogowano',
   },
 }
