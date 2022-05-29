@@ -18,7 +18,7 @@ const initialValues: Model = {
   changeRefreshToken: () => {},
 }
 
-export const UserUserAuthenticationContext = createContext(initialValues)
+export const UserAuthenticationContext = createContext(initialValues)
 
 const UserAuthenticationProvider = ({
   children,
@@ -31,7 +31,7 @@ const UserAuthenticationProvider = ({
     setRefreshToken(refreshToken)
 
   return (
-    <UserUserAuthenticationContext.Provider
+    <UserAuthenticationContext.Provider
       value={{
         accessToken,
         refreshToken,
@@ -40,7 +40,7 @@ const UserAuthenticationProvider = ({
       }}
     >
       {children}
-    </UserUserAuthenticationContext.Provider>
+    </UserAuthenticationContext.Provider>
   )
 }
 

@@ -1,6 +1,7 @@
 export const translationPL = {
   userCreateForm: {
     login: 'Zaloguj',
+    logout: 'Wyloguj',
     register: 'Zarejestruj',
     firstName: 'Imię',
     lastName: 'Nazwisko',

@@ -8,21 +8,24 @@ import {
 } from './view'
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'
-import UserUserAuthenticationProvider from './context/UserAuthenticationProvider'
+import UserAuthenticationProvider from './context/UserAuthenticationProvider'
+import { ProtectedRoute } from './components/utils/ProtectedRoute'
 
 const App = () => {
   return (
-    <UserUserAuthenticationProvider>
+    <UserAuthenticationProvider>
       <div className="mx-auto w-3/4">
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Route>
         </Routes>
         <ToastContainer />
       </div>
-    </UserUserAuthenticationProvider>
+    </UserAuthenticationProvider>
   )
 }
 
