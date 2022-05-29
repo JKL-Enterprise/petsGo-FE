@@ -9,8 +9,16 @@ export const translationPL = {
     password: 'Hasło',
     sitter: 'Opiekun',
     searcher: 'Poszukiwacz',
-    info: {
-      success: 'Utworzono użytkownika',
+  },
+  toastInfo: {
+    register: {
+      registered: 'Utworzono użytkownika',
+      alreadyExist: 'Użytkownik już istnieje',
     },
+    login: {
+      logged: 'Zalogowano',
+      doesntExist: 'Nie znaleziono użytkownika',
+    },
+    serverError: 'Błąd pobierania serwera',
   },
 }

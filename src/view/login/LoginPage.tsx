@@ -20,9 +20,11 @@ export const LoginPage = () => {
     if (response?.status === 200) {
       localStorage.setItem('user', response.data.access_token)
       changeAccessToken(response?.data.access_token)
-      Toast('success', 'Logged')
+      Toast('success', t('toastInfo.login.logged'))
       return navigate('/')
-    } else Toast('error', 'Server fetch error')
+    } else if (response?.response?.status === 403)
+      Toast('info', t('toastInfo.login.doesntExist'))
+    else Toast('error', t('toastInfo.serverError'))
   }
 
   return (

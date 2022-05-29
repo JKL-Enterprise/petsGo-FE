@@ -13,10 +13,11 @@ export const RegisterPage = () => {
 
   const onSubmit = async (values: registerFormModel) => {
     const response = await userService.registration(values)
-    if (response?.status === 200) Toast('success', 'Account created')
+    if (response?.status === 200)
+      Toast('success', t('toastInfo.register.registered'))
     else if (response?.response.status === 500)
-      Toast('info', 'Account already exist')
-    else Toast('error', 'Server fetch error')
+      Toast('info', t('toastInfo.register.alreadyExist'))
+    else Toast('error', t('toastInfo.serverError'))
   }
 
   return (
