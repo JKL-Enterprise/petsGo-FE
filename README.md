@@ -1,4 +1,4 @@
-# pets-GO 🐶🐱
+# petsGo-FE 🐶🐱
 It is a group Engineering Thesis in the implementation phase. Application is created for mobile and web systems. With the help of the application, we can find a job as an animal keeper or add an advertisement in search of a pet sitter. We also want to add a payment mechanism.
 
 ### 🔧Application created with CRA in `Typescript`, uses: 
