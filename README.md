@@ -3,10 +3,13 @@ It is a group Engineering Thesis in the implementation phase. Application is cre
 
 ### 🔧Application created with CRA in `Typescript`, uses: 
 - `react-hooks`
-- `react-router-dom`
+- `react-router-dom v6`
 - `formik` and schema-based form validation with `yup`
 - `tailwindcss`
 - `sass`
+- `i18next`
+- `axios`
+- `react-toastify`
 
 ### 🧪Tests are written using:
 - `jest`
