@@ -43,3 +43,8 @@
     left: 0.8rem;
   }
 }
+
+.input_error{
+  @apply text-red-600;
+  @apply text-sm;
+}
