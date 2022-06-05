@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react'
 
-interface UserUserAuthenticationProviderProps {
+interface UserAuthenticationProviderProps {
   children: JSX.Element | JSX.Element[]
 }
 
@@ -22,7 +22,7 @@ export const UserAuthenticationContext = createContext(initialValues)
 
 const UserAuthenticationProvider = ({
   children,
-}: UserUserAuthenticationProviderProps) => {
+}: UserAuthenticationProviderProps) => {
   const [accessToken, setAccessToken] = useState<string>('')
   const [refreshToken, setRefreshToken] = useState<string>('')
 
