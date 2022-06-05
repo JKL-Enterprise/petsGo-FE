@@ -27,7 +27,14 @@ export const RegisterPage = () => {
         onSubmit={onSubmit}
         validationSchema={validationSchema}
       >
-        {({ values, handleChange, handleSubmit, isSubmitting }) => (
+        {({
+          values,
+          handleChange,
+          handleSubmit,
+          isSubmitting,
+          errors,
+          touched,
+        }) => (
           <form
             onSubmit={handleSubmit}
             className="flex flex-col justify-center items-center gap-3"
@@ -37,18 +44,21 @@ export const RegisterPage = () => {
               label={t('userCreateForm.firstName')}
               onChange={handleChange}
               value={values.firstName}
+              error={errors.firstName && touched.firstName}
             />
             <Input
               name="lastName"
               label={t('userCreateForm.lastName')}
               onChange={handleChange}
               value={values.lastName}
+              error={errors.lastName && touched.lastName}
             />
             <Input
               name="username"
               label={t('userCreateForm.username')}
               onChange={handleChange}
               value={values.username}
+              error={errors.username && touched.username}
             />
             <Input
               name="password"
@@ -56,6 +66,7 @@ export const RegisterPage = () => {
               type="password"
               onChange={handleChange}
               value={values.password}
+              error={errors.password && touched.password}
             />
             <div className="flex gap-3">
               <CheckboxField

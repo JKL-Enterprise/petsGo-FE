@@ -22,4 +22,7 @@ export const translationPL = {
     serverError: 'Błąd pobierania serwera',
     logout: 'Wylogowano',
   },
+  fields: {
+    required: 'To pole jest wymagane',
+  },
 }

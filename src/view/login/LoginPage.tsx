@@ -34,7 +34,14 @@ export const LoginPage = () => {
         onSubmit={onSubmit}
         validationSchema={validationSchema}
       >
-        {({ values, handleChange, handleSubmit, isSubmitting }) => (
+        {({
+          values,
+          handleChange,
+          handleSubmit,
+          isSubmitting,
+          touched,
+          errors,
+        }) => (
           <form
             onSubmit={handleSubmit}
             className="flex flex-col justify-center items-center gap-3"
@@ -44,6 +51,7 @@ export const LoginPage = () => {
               label={t('userCreateForm.username')}
               onChange={handleChange}
               value={values.username}
+              error={errors.username && touched.username}
             />
             <Input
               name="password"
@@ -51,6 +59,7 @@ export const LoginPage = () => {
               type="password"
               onChange={handleChange}
               value={values.password}
+              error={errors.password && touched.password}
             />
 
             <Button
